@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Royal Cue Reservation</title>
+
+        <!-- Include Firebase SDKs -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+        
+        
+        <!-- CSS FILES -->                
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap" rel="stylesheet">
+            
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/vegas.min.css" rel="stylesheet">
+
+        <link href="css/tooplate-barista.css" rel="stylesheet">
+<!--
+
+Tooplate 2137 Barista
+
+https://www.tooplate.com/view/2137-barista-cafe
+
+Bootstrap 5 HTML CSS Template
+
+-->
+    </head>
+    
+    <body class="reservation-page">
+                
+            <main>
+                <nav class="navbar navbar-expand-lg">                
+                    <div class="container">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="">
+                            Reservation
+                        </a>
+        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#section_1">Home</a>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a class="nav-link" href="menu.html">Menu</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#section_5">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="index.html#section_6">Find Us </a>
+                                </li>
+                            </ul>
+
+                            <div class="ms-lg-3">
+                                <a class="btn custom-btn custom-border-btn" href="reservation.html">
+                                    Reservation
+                                    <i class="bi-arrow-up-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
+
+                <section class="booking-section section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <div class="booking-form-wrap">
+                                <div class="row">
+                                    <div class="col-lg-7 col-12 p-0">
+                                        <form class="custom-form booking-form" id="bookingForm" role="form">
+                                            <div class="text-center mb-4 pb-lg-2">
+                                                <em class="text-white">Fill out the booking form</em>
+                                                <h2 class="text-white">Book a table</h2>
+                                            </div>
+                                        
+                                            <div class="booking-form-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-12">
+                                                        <input type="text" name="booking-form-name" id="booking-form-name" class="form-control" placeholder="Full Name" required>
+                                                    </div>
+                                                    <div class="col-lg-6 col-12">
+                                                        <input type="text" class="form-control" id="booking-form-phone" name="booking-form-phone" placeholder="0854567890" pattern="[0-9]{10}" required>
+                                                    </div>
+                                                    <div class="col-lg-6 col-12">
+                                                        <input class="form-control" type="time" name="booking-form-time" id="booking-form-time" value="18:30">
+                                                        <div id="time-error" class="text-danger mt-2" style="display: none;">Please enter a valid time.</div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-12">
+                                                        <input type="date" name="booking-form-date" id="booking-form-date" class="form-control" placeholder="Date" required>
+                                                        <div id="date-error" class="text-danger mt-2" style="display: none;">Sorry, we are closed on Mondays.</div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-12">
+                                                        <input type="number" name="booking-form-number" id="booking-form-number" class="form-control" placeholder="Number of People" required>
+                                                        <textarea name="booking-form-message" rows="3" class="form-control" id="booking-form-message" placeholder="Comment (Optional)"></textarea>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-10 col-8 mx-auto mt-2">
+                                                        <button type="submit" class="form-control" id="submit-button">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <script>
+                                            document.getElementById('booking-form-date').addEventListener('input', validateDateAndTime);
+                                            document.getElementById('booking-form-time').addEventListener('input', validateDateAndTime);
+                                            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+                                                event.preventDefault(); // Prevent the form from submitting the traditional way
+                                            
+                                                if (validateDateAndTime()) {
+                                                    // Simulate a successful reservation submission
+                                                    Swal.fire({
+                                                        title: 'Reservation Successful!',
+                                                        text: 'Your reservation has been successfully submitted.',
+                                                        icon: 'success',
+                                                        confirmButtonText: 'OK'
+                                                    })
+                                                    
+                                                }
+                                            });
+                                            
+                                            function validateDateAndTime() {
+                                                const dateInput = document.getElementById('booking-form-date').value;
+                                                const timeInput = document.getElementById('booking-form-time').value;
+                                                const dateError = document.getElementById('date-error');
+                                                const timeError = document.getElementById('time-error');
+                                                const submitButton = document.getElementById('submit-button');
+                                                
+                                                let hasError = false;
+                                            
+                                                if (dateInput) {
+                                                    const selectedDate = new Date(dateInput);
+                                                    const dayOfWeek = selectedDate.getUTCDay();
+                                            
+                                                    if (dayOfWeek === 1) {
+                                                        dateError.style.display = 'block';
+                                                        timeError.style.display = 'none';
+                                                        hasError = true;
+                                                    } else {
+                                                        dateError.style.display = 'none';
+                                                    }
+                                            
+                                                    const timeParts = timeInput.split(':');
+                                                    const hours = parseInt(timeParts[0], 10);
+                                                    const minutes = parseInt(timeParts[1], 10);
+                                                    let isValid = false;
+                                            
+                                                    if (dayOfWeek === 5 || dayOfWeek === 6) {
+                                                        if ((hours >= 15 && hours < 24) || (hours >= 0 && hours < 3)) {
+                                                            isValid = true;
+                                                        }
+                                                    } else {
+                                                        if ((hours >= 15 && hours < 24) || (hours >= 0 && hours < 1)) {
+                                                            isValid = true;
+                                                        }
+                                                    }
+                                            
+                                                    if (isValid) {
+                                                        timeError.style.display = 'none';
+                                                    } else {
+                                                        timeError.style.display = 'block';
+                                                        hasError = true;
+                                                    }
+                                                }
+                                            
+                                                submitButton.disabled = hasError;
+                                                return !hasError;
+                                            }
+                                            
+                                        
+                                            </script>
+
+                                        <script type="module">
+                                            // Import the functions you need from the SDKs you need
+                                            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+                                            // TODO: Add SDKs for Firebase products that you want to use
+                                            // https://firebase.google.com/docs/web/setup#available-libraries
+                                          
+                                            // Your web app's Firebase configuration
+                                            const firebaseConfig = {
+                                              apiKey: "AIzaSyA2OPEYN_dA-kLVebvi0YoGDSbwQK-hzLk",
+                                              authDomain: "royalcuereaddata.firebaseapp.com",
+                                              databaseURL: "https://royalcuereaddata-default-rtdb.asia-southeast1.firebasedatabase.app",
+                                              projectId: "royalcuereaddata",
+                                              storageBucket: "royalcuereaddata.appspot.com",
+                                              messagingSenderId: "323710942719",
+                                              appId: "1:323710942719:web:3c445a0f8f91b0e9b77bca"
+                                            };
+                                          
+                                            // Initialize Firebase
+                                            const app = initializeApp(firebaseConfig);
+
+                                            import {getDatabase, set , get , update , remove , ref , child }
+                                            from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+                                            const database = getDatabase();
+
+                                            const myForm = document.getElementById("bookingForm")
+                                
+                                            myForm.addEventListener('submit', (event) => {
+                                            
+                                                event.preventDefault(); 
+                                                
+                                
+                                                const name = document.getElementById('booking-form-name').value;
+                                                const phone = document.getElementById('booking-form-phone').value;
+                                                const time = document.getElementById('booking-form-time').value;
+                                                const date = document.getElementById('booking-form-date').value;
+                                                const number = document.getElementById('booking-form-number').value;
+                                                const message = document.getElementById('booking-form-message').value;
+                                                
+
+                                                const database = getDatabase();
+                                                const reference = ref(database, 'bookings/' + phone);
+                                                set(reference, {
+                                                    name: name,
+                                                    phone : phone,
+                                                    time : time,
+                                                    date : date,
+                                                    number : number,
+                                                    message : message,
+                                                });
+
+
+                                                document.getElementById('bookingForm').reset();
+
+
+                                            })
+
+
+                                        </script>
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 p-0">
+                                        <div class="booking-form-image-wrap">
+                                            
+                                            <img src="images/barman-with-fruits.jpg" class="booking-form-image img-fluid" alt="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+                <footer class="site-footer" id="section_6">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-12 me-auto">
+                                <em class="text-white d-block mb-4">Where to find us?</em>
+
+                                <strong class="text-white">
+                                    <i class="bi-geo-alt me-2"></i>
+                                    850 Sydney Rd, Brunswick VIC 3056
+                                
+                                </strong>
+
+                                <ul class="social-icon mt-4">
+                                    <li class="social-icon-item">
+                                        <div class="row">  
+                                        <a href="https://www.instagram.com/royalcuebilliard/"  alt="instagram link" class="social-icon-link bi-instagram">
+                                        </a>
+
+                                        <a href="https://www.facebook.com/profile.php?id=61560066179671"  alt="facebook link" class="social-icon-link bi-facebook">
+                                        </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                                <em class="text-white d-block mb-4">Contact</em>
+
+                                <p class="d-flex mb-1">
+                                    <strong class="me-2">Phone:</strong>
+                                    <a href="tel: 305-240-9671" class="site-footer-link">
+                                        0393790540
+                                    </a>
+                                </p>
+
+                                <p class="d-flex">
+                                    <strong class="me-2">Email:</strong>
+
+                                    <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                        Royalcue@hotmail.com
+                                    </a>
+                                </p>
+                            </div>
+
+
+                            <div class="col-lg-5 col-12">
+                                <em class="text-white d-block mb-4">Opening Hours.</em>
+
+                                <ul class="opening-hours-list">
+                                    <li class="d-flex">
+                                        Monday
+                                        <span class="underline"></span>
+
+                                        <strong>Closed</strong>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        Tuesday - Thursday
+                                        <span class="underline"></span>
+
+                                        <strong>3:00 PM - 1:00 AM</strong>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        Friday - Saturday
+                                        <span class="underline"></span>
+
+                                        <strong>3:00 PM - 4:00 AM</strong>
+                                    </li>
+
+                                    <li class="d-flex">
+                                        Sunday
+                                        <span class="underline"></span>
+
+                                        <strong>3:00 PM - 1:00 AM</strong>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                    </div>
+                </footer>
+            </main>
+
+
+        <!-- JAVASCRIPT FILES -->
+        
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/vegas.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
