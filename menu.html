@@ -1127,6 +1127,59 @@ Bootstrap 5 HTML CSS Template
                         </div>
                               <script>
 
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.tm-btn-primary');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            this.classList.add('active');
+            // Remove active class after a delay to revert back to original color
+            setTimeout(() => {
+                this.classList.remove('active');
+            }, 400); // Adjust delay as needed
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.tm-btn-nodisc');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            this.classList.add('active');
+            // Remove active class after a delay to revert back to original color
+            setTimeout(() => {
+                this.classList.remove('active');
+            }, 400); // Adjust delay as needed
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.tm-btn-cart');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            this.classList.add('active');
+            // Remove active class after a delay to revert back to original color
+            setTimeout(() => {
+                this.classList.remove('active');
+            }, 400); // Adjust delay as needed
+        });
+    });
+});
+
+
+
 
 
                                 document.addEventListener('DOMContentLoaded', function() {

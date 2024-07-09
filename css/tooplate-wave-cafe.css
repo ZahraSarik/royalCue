@@ -343,7 +343,13 @@ h2 { margin-top: 0; }
     padding: 5px 10px;
     font-size: 1.0rem;
     cursor: pointer;
-    transition: all 0.3s ease; 
+    transition: all 0.1s ease; 
+}
+
+
+.tm-btn-primary.active {
+    color: white;
+    background-color: rgba(188, 108, 37, 1);
 }
 
 .tm-btn-nodisc {
@@ -355,8 +361,13 @@ h2 { margin-top: 0; }
     margin-bottom: 5px;
     font-size: 1.0rem;
     cursor: pointer;
-    transition: all 0.3s ease; 
+    transition: all 0.1s ease; 
 }
+.tm-btn-nodisc.active {
+    color: white;
+    background-color: rgba(188, 108, 37, 1);
+}
+
 
 .tm-btn-cart {
     color: rgba(188, 108, 37, 1);
@@ -366,6 +377,11 @@ h2 { margin-top: 0; }
     font-size: 1.0rem;
     cursor: pointer;
     transition: all 0.3s ease; 
+}
+
+.tm-btn-cart.active {
+    color: white;
+    background-color: rgba(188, 108, 37, 1);
 }
 
 .swal2-confirm {
@@ -380,20 +396,7 @@ h2 { margin-top: 0; }
     background-size: cover;
 }
 
-.tm-btn-primary:hover {
-    color: white;
-    background-color: rgba(188, 108, 37, 1);
-}
 
-.tm-btn-cart:hover {
-    color: white;
-    background-color: rgba(188, 108, 37, 1);
-}
-
-.tm-btn-nodisc:hover {
-    color: white;
-    background-color: rgba(188, 108, 37, 1);
-}
 
 .total_price {
     padding-top: 30px;
