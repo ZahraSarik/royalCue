@@ -246,6 +246,15 @@ h2 { margin-top: 0; }
 }
 
 .tm-list-item-price { color: rgba(188, 108, 37, 1) }
+
+
+
+
+
+
+
+
+
 .tm-site-footer { margin-top: 15px; }
 
 .tm-footer-text {
@@ -332,6 +341,18 @@ h2 { margin-top: 0; }
     background-color: white;
     border: 0;
     padding: 5px 10px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.tm-btn-nodisc {
+    color: rgba(188, 108, 37, 1);
+    background-color: white;
+    border: 0;
+    padding: 5px 10px;
+    margin-top: 55px;
+    margin-bottom: 5px;
     font-size: 1.0rem;
     cursor: pointer;
     transition: all 0.3s ease; 
