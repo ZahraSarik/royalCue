@@ -390,6 +390,11 @@ h2 { margin-top: 0; }
     background-color: rgba(188, 108, 37, 1);
 }
 
+.tm-btn-nodisc:hover {
+    color: white;
+    background-color: rgba(188, 108, 37, 1);
+}
+
 .total_price {
     padding-top: 30px;
    
