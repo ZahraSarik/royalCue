@@ -341,8 +341,8 @@ h2 { margin-top: 0; }
     color: rgba(188, 108, 37, 1);
     background-color: white;
     border: 0;
-    padding: 30px ;
-    font-size: 1.4rem;
+    padding: 20.5px ;
+    font-size: 1.0rem;
     cursor: pointer;
     transition: all 0.3s ease; 
 }
