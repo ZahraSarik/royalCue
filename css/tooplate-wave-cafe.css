@@ -198,8 +198,8 @@ h2 { margin-top: 0; }
 
 .tm-list-item-img {
     margin-right: 20px;
-    width: 160px;
-    height: 160px;
+    width: 30%;
+    height: 30%;
     background-color: rgba(188, 108, 37, 1);
 }
 
@@ -271,7 +271,7 @@ h2 { margin-top: 0; }
 }
 
 .tm-special-item {
-    max-width: 320px;
+    max-width: 200px;
     margin: 30px 10px;
 }
 
@@ -315,7 +315,7 @@ h2 { margin-top: 0; }
     color: rgba(188, 108, 37, 1);
     background-color: white;
     border: 0;
-    padding: 12px 40px;
+    padding: 12px 10px;
     font-size: 1.4rem;
     cursor: pointer;
     transition: all 0.3s ease; 
@@ -396,8 +396,8 @@ h2 { margin-top: 0; }
 
 @media (max-width: 550px) and (min-width: 501px) {
     .tm-list-item-img-big {
-        width: 160px;
-        height: 160px;
+        width: 90%;
+        height: 90%;
     }
 
     .tm-about-header { margin-left: 180px; }
@@ -410,7 +410,7 @@ h2 { margin-top: 0; }
 
     .tm-list-item-img-big {
         margin-right: 0;
-        margin-bottom: 25px;
+        margin-bottom: 0;
     }
 
     .tm-img-right { margin-left: 0; }
@@ -427,7 +427,7 @@ h2 { margin-top: 0; }
 
     .tm-list-item-img {
         margin-right: 0;
-        margin-bottom: 15px;        
+               
     }
 
     .tm-drinks-nav { height: auto; }
