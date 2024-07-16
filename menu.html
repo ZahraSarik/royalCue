@@ -615,7 +615,7 @@ Bootstrap 5 HTML CSS Template
                                 <div id="coffee" class="tm-tab-content">
                                   <div class="tm-list">
                                       <div class="tm-list-item">          
-                                        <img src="img/latte.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <img src="img/latte.jpg" alt="coffee latte" class="tm-list-item-img">
                                         <div class="tm-black-bg tm-list-item-text">
                                             <p class="tm-list-item-name">Latte<span class="tm-list-item-price">$4.5</span></p>
                                             <div>
@@ -630,7 +630,7 @@ Bootstrap 5 HTML CSS Template
 
                                     <div class="tm-list">
                                       <div class="tm-list-item">          
-                                        <img src="img/cappuccino.jpg." alt="Strawberry Shake" class="tm-list-item-img">
+                                        <img src="img/cappuccino.jpg" alt="cappuccino coffee" class="tm-list-item-img">
                                         <div class="tm-black-bg tm-list-item-text">
                                             <p class="tm-list-item-name">Cappuccino<span class="tm-list-item-price">$4.25</span></p>
                                             
@@ -645,7 +645,7 @@ Bootstrap 5 HTML CSS Template
 
                                     <div class="tm-list">
                                       <div class="tm-list-item">          
-                                        <img src="img/flatWhite.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <img src="img/flatWhite.jpg" alt="flat white coffee" class="tm-list-item-img">
                                         <div class="tm-black-bg tm-list-item-text">
                                             <p class="tm-list-item-name">Flat White<span class="tm-list-item-price">$4.75</span></p>
                                             
@@ -660,7 +660,7 @@ Bootstrap 5 HTML CSS Template
 
                                     <div class="tm-list">
                                       <div class="tm-list-item">          
-                                        <img src="img/longBlack.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <img src="img/longBlack.jpg" alt="Long Black coffee" class="tm-list-item-img">
                                         <div class="tm-black-bg tm-list-item-text">
                                             <p class="tm-list-item-name">Long Black<span class="tm-list-item-price">$4.25</span></p>
                                             
@@ -676,7 +676,7 @@ Bootstrap 5 HTML CSS Template
 
                                     <div class="tm-list">
                                       <div class="tm-list-item">          
-                                        <img src="img/mocha.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <img src="img/mocha.jpg" alt="Mocha coffee" class="tm-list-item-img">
                                         <div class="tm-black-bg tm-list-item-text">
                                             <p class="tm-list-item-name">Mocha<span class="tm-list-item-price">$6.25</span></p>
                                             
@@ -691,7 +691,7 @@ Bootstrap 5 HTML CSS Template
 
                                     <div class="tm-list">
                                       <div class="tm-list-item">          
-                                        <img src="img/piccolo.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <img src="img/piccolo.jpg" alt="Piccolo coffee" class="tm-list-item-img">
                                         <div class="tm-black-bg tm-list-item-text">
                                             <p class="tm-list-item-name">Piccolo<span class="tm-list-item-price">$3.5</span></p>
                                             
@@ -1354,6 +1354,32 @@ document.addEventListener('DOMContentLoaded', function() {
                                     document.getElementById('addHeineken').addEventListener('click', function() {
                                         addToCart('Heineken', "9");
                                     });
+                                    //<-------coffee ---->
+
+                                      document.getElementById('addLatte').addEventListener('click', function() {
+                                        addToCart('Latte', "4.5");
+                                    });
+
+                                    document.getElementById('addCappuccino').addEventListener('click', function() {
+                                        addToCart('Cappuccino', "4.25");
+                                    });
+
+                                    document.getElementById('addFlatWhite').addEventListener('click', function() {
+                                        addToCart('Flat White', "4.75");
+                                    });
+
+                                    document.getElementById('addLongBlack').addEventListener('click', function() {
+                                        addToCart('Long Black', "4.25");
+                                    });
+
+                                    document.getElementById('addMocha').addEventListener('click', function() {
+                                        addToCart('Mocha', "6.25");
+                                    });
+
+                                    document.getElementById('addPiccolo').addEventListener('click', function() {
+                                        addToCart('Piccolo', "3.5");
+                                    });
+
 
                                     // <------Shisha---->
                                     document.getElementById('addShishaApple').addEventListener('click', function() {
