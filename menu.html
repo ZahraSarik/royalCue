@@ -102,7 +102,6 @@ Bootstrap 5 HTML CSS Template
                           <!-- Site Header -->
                           <div class="tm-left">
                             <div >
-
                               <nav class="tm-site-nav">
                                 <ul class="tm-site-nav-ul">
                                   <li class="tm-page-nav-item">
@@ -113,7 +112,8 @@ Bootstrap 5 HTML CSS Template
                                   </li>
                                   <li class="tm-page-nav-item">
                                     <a href="#nodrink" class="tm-page-link">
-                                        <i class="fa-solid fa-martini-glass-citrus tm-page-link-icon"></i>
+                                      
+                                        <i class="fa-solid fa-mug-saucer tm-page-link-icon"></i>
                                         <span>Non-Alcoholic</span>
                                     </a>
                                   </li>
@@ -456,6 +456,9 @@ Bootstrap 5 HTML CSS Template
                                     <li>
                                       <a href="#" class="tm-tab-link" data-id="shakes">Shakes</a>
                                     </li>
+                                    <li>
+                                      <a href="#" class="tm-tab-link" data-id="coffee">Coffee</a>
+                                    </li>
                                   </ul>
                                 </nav>
 
@@ -606,6 +609,58 @@ Bootstrap 5 HTML CSS Template
 
 
                                 </div> 
+
+
+
+                                <div id="coffee" class="tm-tab-content">
+                                  <div class="tm-list">
+                                      <div class="tm-list-item">          
+                                        <img src="img/chocolateShake.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <div class="tm-black-bg tm-list-item-text">
+                                            <p class="tm-list-item-name">Chocolate Shake<span class="tm-list-item-price">$10.25</span></p>
+                                            <p class="tm-list-item-description">Milk, Chocolate, Ice Cream</p>
+                                            <div>
+                                              <button type="submit"  id="addChocolate" class="tm-btn-primary tm-align-right">
+                                                Add to Cart 
+                                              </button>
+                                            </div>
+                                        </div>
+                                    </div>                      
+                                    </div>
+
+
+                                    <div class="tm-list">
+                                      <div class="tm-list-item">          
+                                        <img src="img/strawberryShake.jpg" alt="Strawberry Shake" class="tm-list-item-img">
+                                        <div class="tm-black-bg tm-list-item-text">
+                                            <p class="tm-list-item-name">Strawberry Shake<span class="tm-list-item-price">$10.25</span></p>
+                                            <p class="tm-list-item-description">Strawberries, Milk, Ice Cream</p>
+                                            <div>
+                                              <button type="submit" id="addStrawberry" class="tm-btn-primary tm-align-right">
+                                                Add to Cart 
+                                              </button>
+                                            </div>
+                                        </div>
+                                    </div>                      
+                                    </div>
+
+                                    <div class="tm-list">
+                                      <div class="tm-list-item">          
+                                        <img src="img/vanilla-milkshake-photo.jpg" alt="chocolate shake" class="tm-list-item-img">
+                                        <div class="tm-black-bg tm-list-item-text">
+                                            <p class="tm-list-item-name">Vanilla Shake<span class="tm-list-item-price">$10.25</span></p>
+                                            <p class="tm-list-item-description">Vanilla, Milk, Ice Cream</p>
+                                            <div>
+                                              <button type="submit" id="addVanilla" class="tm-btn-primary tm-align-right">
+                                                Add to Cart 
+                                              </button>
+                                            </div>
+                                        </div>
+                                    </div>                      
+                                    </div>
+
+
+                              </div> 
 
 
 
@@ -793,142 +848,176 @@ Bootstrap 5 HTML CSS Template
                                   </div>                      
                                   </div>
 
-                               
-
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/magicLove.jpg" alt="magic love shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Magic Love</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                       
-                                      <div>
-                                        <button type="submit" id = "addShishaMagicLove"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/magicLove.jpg" alt="magic love shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Magic Love<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaMagicLove" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
                                       </div>
-                                    </div>
+                                  </div>                      
                                   </div>
 
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/lady.jpg" alt="Lady shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Lady</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaLadyKiller"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/lady.jpg" alt="Lady shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Lady<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaLadyKiller" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
                                       </div>
-                                    </div>
+                                  </div>                      
                                   </div>
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/orange.jpg" alt="Orange shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Orange</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaOrange"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
+
+
+                                  
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/orange.jpg" alt="Orange shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Orange<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaOrange" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
                                       </div>
-                                    </div>
-                                  </div>   
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/orangeMint.jpg" alt="orange mint shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Orange Mint</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaOrangeMint"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>  
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/lemon.jpg" alt="lemon shisha flavour">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Lemon</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaLemon"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>  
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/lemonMint.jpg" alt="lemon mint shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Lemon Mint</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaLemonMint"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>  
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/melon.jpg" alt="melon shisha flavors">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Melon</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaMelon"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>   
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/strawberry.jpg" alt="Strawberry shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Strawberry</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaStrawberry"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div> 
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/kiwi.jpg" alt="kiwi shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Kiwi</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaKiwi"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div> 
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/peach.jpg" alt="peach flavor shisha">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Peach</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaPeach"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
-                                      </div>
-                                    </div>
+                                  </div>                      
                                   </div>
-                                  <div class="tm-black-bg tm-special-item">
-                                    <img src="img/Watermelon.jpg" alt="Watermelon shisha flavor">
-                                    <div class="tm-special-item-description">
-                                      <h2 class="tm-text-primary tm-special-item-title">Watermelon</h2>
-                                      <h2 class="tm-text-primary tm-special-item-title">$40</h2>
-                                      <div>
-                                        <button type="submit" id = "addShishaWatermelon"  class="tm-btn-primary tm-align-right">
-                                          Add to Cart 
-                                        </button>
+
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/orangeMint.jpg" alt="orange mint shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Orange Mint<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaOrangeMint" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
                                       </div>
-                                    </div>
-                                  </div>                                               
+                                  </div>                      
+                                  </div>
+
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/lemon.jpg" alt="lemon shisha flavour" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Lemon<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaLemon" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/lemonMint.jpg" alt="lemon mint shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Lemon Mint<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaLemonMint" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/melon.jpg" alt="melon shisha flavors" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Melon<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaMelon" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/strawberry.jpg" alt="Strawberry shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Strawberry<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaStrawberry" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/kiwi.jpg" alt="kiwi shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Kiwi<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaKiwi" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/peach.jpg" alt="peach flavor shisha" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Peach<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaPeach" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+
+                                  <div class="tm-list">
+                                    <div class="tm-list-item">          
+                                      <img src="img/Watermelon.jpg" alt="Watermelon shisha flavor" class="tm-list-item-img">
+                                      <div class="tm-black-bg tm-list-item-text">
+                                          <p class="tm-list-item-name">Watermelon<span class="tm-list-item-price">$40</span></p>
+                                          <p class="tm-list-item-description"></p>
+                                          <div>
+                                            <button type="submit" id="addShishaWatermelon" class="tm-btn-nodisc tm-align-right">
+                                              Add to Cart 
+                                            </button>
+                                          </div>
+                                      </div>
+                                  </div>                      
+                                  </div>
+                                                
                                 </div>            
                               </div>
 
